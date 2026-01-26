@@ -22,5 +22,13 @@ export const projects = [
       image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800',
       github: '#',
       demo: '#'
+    },
+    {
+      title: 'Task Management webApp',
+      description: 'Collaborative productivity tool with drag-and-drop kanban boards and real-time team updates.',
+      tags: ['Vue.js', 'Socket.io', 'Express', 'MongoDB'],
+      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800',
+      github: '#',
+      demo: '#'
     }
   ];
