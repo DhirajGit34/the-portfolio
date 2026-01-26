@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -33,6 +34,26 @@ const App = () => {
         <Contact />
         <Footer />
       </div>
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{ margin: "8px" }}
+        toastOptions={{
+          success: {
+            duration: 1000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: "16px",
+            maxWidth: "500px",
+            padding: "16px 24px",
+            backgroundColor: "var(--color-grey-0)",
+            color: "var(--color-grey-700)",
+          },
+        }}
+      />
       {/* Global Style for Animations */}
       <style>{`
         .animate-fade-in-up {

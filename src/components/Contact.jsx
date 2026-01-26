@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { Mail, Linkedin, Github, Send } from 'lucide-react'
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
 
@@ -19,12 +20,12 @@ const Contact = () => {
       .then(
         () => {
           console.log('SUCCESS!');
-          alert('Message sent successfully!');
+          toast.success('Message sent successfully!');
           e.target.reset(); // Clears the form after sending
         },
         (error) => {
           console.log('FAILED...', error.text);
-          alert('Failed to send the message, please try again.');
+          toast.error('Failed to send the message, please try again.');
         },
       );
   };
@@ -76,7 +77,7 @@ const Contact = () => {
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
-              <input type="email" email="user_email" required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200" placeholder="john@example.com" />
+              <input type="email" name="user_email" required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200" placeholder="john@example.com" />
             </div>
           </div>
           <div className="space-y-2">
