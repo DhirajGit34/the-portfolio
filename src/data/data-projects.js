@@ -1,11 +1,11 @@
 export const projects = [
     {
-      title: 'E-Commerce Dashboard',
+      title: 'Cabin Booking App',
       description: 'A comprehensive analytics dashboard for online retailers featuring real-time data visualization and inventory management.',
-      tags: ['React', 'D3.js', 'Firebase', 'Tailwind'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-      github: '#',
-      demo: '#'
+      tags: ['React', 'Tanstack', 'Supabase', 'Styled-Components'],
+      image: 'https://tinyurl.com/yandhum9',
+      github: 'https://github.com/DhirajGit34/booking-app',
+      demo: 'https://booking-app-pearl-nine.vercel.app/login'
     },
     {
       title: 'AI Chat Interface',

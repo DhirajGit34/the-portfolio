@@ -1,7 +1,9 @@
 import React, { useRef } from 'react'
-import { Mail, Linkedin, Github, Send } from 'lucide-react'
+import { Mail, Linkedin, Github, Send, Import } from 'lucide-react'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+// import dotenv from "../.env"
+
 
 const Contact = () => {
 
@@ -10,16 +12,15 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_m0jy91i',    // Paste your Service ID here
-        'template_no6mn1l',   // Paste your Template ID here
+        import.meta.env.VITE_SERVICE_ID,    // Paste your Service ID here
+        import.meta.env.VITE_TEMPLATE_ID,   // Paste your Template ID here
         form.current,         // This passes the form data
         {
-          publicKey: 'F8hwJdxV56X9Am-4X', // Paste your Public Key here
+          publicKey: import.meta.env.VITE_PUBLIC_KEY, // Paste your Public Key here
         }
       )
       .then(
         () => {
-          console.log('SUCCESS!');
           toast.success('Message sent successfully!');
           e.target.reset(); // Clears the form after sending
         },
@@ -73,11 +74,11 @@ const Contact = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <label className="text-sm font-medium  text-slate-700 dark:text-slate-300">Name</label>
-              <input type="text" name="user_name" required className="w-full  bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200" placeholder="John Doe" />
+              <input type="text" name="user_name" required className="w-full  bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200" placeholder="Your Name" />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
-              <input type="email" name="user_email" required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200" placeholder="john@example.com" />
+              <input type="email" name="user_email" required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200" placeholder="hello@gmail.com" />
             </div>
           </div>
           <div className="space-y-2">
