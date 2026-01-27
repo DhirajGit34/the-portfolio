@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 // import dotenv from "../.env"
 
-
 const Contact = () => {
 
   const form = useRef();
