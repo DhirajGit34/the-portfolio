@@ -1,11 +1,9 @@
 import React, { useRef } from 'react'
-import { Mail, Linkedin, Github, Send, Import } from 'lucide-react'
+import { Mail, Linkedin, Github, Send } from 'lucide-react'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
-// import dotenv from "../.env"
 
 const Contact = () => {
-
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
