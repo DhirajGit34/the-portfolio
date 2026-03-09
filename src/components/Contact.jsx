@@ -1,12 +1,14 @@
-import React, { useRef } from 'react'
-import { Mail, Linkedin, Github, Send } from 'lucide-react'
+import React, { useRef, useState } from 'react'
+import { Mail, Linkedin, Github, Send, Loader2 } from 'lucide-react'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,    // Paste your Service ID here
@@ -20,10 +22,12 @@ const Contact = () => {
         () => {
           toast.success('Message sent successfully!');
           e.target.reset(); // Clears the form after sending
+          setIsLoading(false);
         },
         (error) => {
           console.log('FAILED...', error.text);
           toast.error('Failed to send the message, please try again.');
+          setIsLoading(false);
         },
       );
   };
@@ -47,7 +51,7 @@ const Contact = () => {
               <Mail size={24} />
             </div>
             <h3 className="font-semibold mb-1 text-slate-900 dark:text-slate-100">Email</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">hello@dhiraj.dev</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">dhirajdeka36@gmail.com</p>
           </div>
 
           <div className="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col items-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
@@ -82,8 +86,8 @@ const Contact = () => {
             <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
             <textarea rows="4" name='message' required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-teal-500 transition-colors text-slate-900 dark:text-slate-200 resize-none" placeholder="Let's build something together..."></textarea>
           </div>
-          <button className="w-full bg-teal-500 hover:bg-teal-600 text-white dark:text-slate-900 font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 transform hover:scale-[1.02]">
-            Send Message <Send size={18} />
+          <button type="submit" disabled={isLoading} className="w-full bg-teal-500 hover:bg-teal-600 text-white dark:text-slate-900 font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 transform hover:scale-[1.02]">
+            {isLoading ? <Loader2 className="animate-spin" size={18} /> : 'Send Message'}
           </button>
         </form>
       </div>
