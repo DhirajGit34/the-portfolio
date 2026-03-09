@@ -59,7 +59,7 @@ const Contact = () => {
               <Linkedin size={24} />
             </div>
             <h3 className="font-semibold mb-1 text-slate-900 dark:text-slate-100">LinkedIn</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">/in/dhirajdev</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">/in/dhiraj-deka</p>
           </div>
 
           <div className="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col items-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
@@ -67,7 +67,7 @@ const Contact = () => {
               <Github size={24} />
             </div>
             <h3 className="font-semibold mb-1 text-slate-900 dark:text-slate-100">GitHub</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">@dhirajcode</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">@DhirajGit34</p>
           </div>
         </div>
 
