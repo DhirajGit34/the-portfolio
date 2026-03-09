@@ -23,10 +23,10 @@ const About = () => {
 
           <div className="space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200">
             <p>
-              Hello! My name is Dhiraj and I enjoy creating things that live on the internet. My interest in web development started back in 2014 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS was delightful!
+              Hello! My name is Dhiraj and I enjoy creating things that live on the internet. My interest in web development started back in 2024 when I decided to try building my own projects.
             </p>
             <p>
-              Fast-forward to today, and I've had the privilege of building my own products. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
+              Fast-forward to today, and I've had the privilege of building my own products. My main focus these days is building accessible, inclusive products and digital experiences for a variety of projects.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="flex items-center gap-2">
