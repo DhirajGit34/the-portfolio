@@ -14,7 +14,7 @@ const About = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative bg-white dark:bg-slate-900 rounded-lg p-1">
               <img
-                src="src\assets\me.png"
+                src="https://res.cloudinary.com/dut1scwtf/image/upload/v1773085383/1758310247291-Photoroom_gubwhs.png"
                 alt="Workspace"
                 className="rounded-lg grayscale hover:grayscale-0 transition-all duration-500 w-full shadow-lg"
               />
